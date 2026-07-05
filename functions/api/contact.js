@@ -4,26 +4,40 @@ export async function onRequestPost(context) {
   try {
     const formData = await request.formData();
 
-    const name = String(formData.get("name") || "").trim();
+    const firstname = String(formData.get("firstname") || "").trim();
+    const lastname = String(formData.get("lastname") || "").trim();
+    const fallbackName = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
-    const subject = String(formData.get("subject") || "").trim();
+    const topic = String(formData.get("topic") || formData.get("subject") || "").trim();
     const message = String(formData.get("message") || "").trim();
+    const privacyAccepted = formData.get("privacy") !== null;
 
-    if (!name || !email || !subject || !message) {
+    const fullName = `${firstname} ${lastname}`.trim() || fallbackName;
+
+    if (!fullName || !email || !message) {
       return new Response("Bitte füllen Sie alle Pflichtfelder aus.", {
         status: 400,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+    }
+
+    if (!privacyAccepted) {
+      return new Response("Bitte bestätigen Sie die Datenschutzerklärung.", {
+        status: 400,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
       });
     }
 
     if (!isValidEmail(email)) {
       return new Response("Bitte geben Sie eine gültige E-Mail-Adresse ein.", {
         status: 400,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
       });
     }
 
-    const safeName = name.slice(0, 120);
+    const safeName = fullName.slice(0, 160);
     const safeEmail = email.slice(0, 160);
-    const safeSubject = subject.slice(0, 140);
+    const safeTopic = topic.slice(0, 140) || "Kontaktformular";
     const safeMessage = message.slice(0, 5000);
 
     const emailHtml = `
@@ -32,7 +46,7 @@ export async function onRequestPost(context) {
 
         <p><strong>Name:</strong> ${escapeHtml(safeName)}</p>
         <p><strong>E-Mail:</strong> ${escapeHtml(safeEmail)}</p>
-        <p><strong>Betreff:</strong> ${escapeHtml(safeSubject)}</p>
+        <p><strong>Betreff:</strong> ${escapeHtml(safeTopic)}</p>
 
         <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
 
@@ -50,7 +64,7 @@ export async function onRequestPost(context) {
         from: "Elysium Kontaktformular <kontakt@mail.elysiumgunclub.com>",
         to: ["info@elysiumgunclub.com"],
         reply_to: safeEmail,
-        subject: `Kontaktformular: ${safeSubject}`,
+        subject: `Kontaktformular: ${safeTopic}`,
         html: emailHtml,
       }),
     });
@@ -61,26 +75,38 @@ export async function onRequestPost(context) {
 
       return new Response(
         "Die Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es später erneut.",
-        { status: 500 }
+        {
+          status: 500,
+          headers: { "Content-Type": "text/plain; charset=utf-8" },
+        }
       );
     }
 
     return new Response(
       "Vielen Dank. Ihre Nachricht wurde erfolgreich gesendet.",
-      { status: 200 }
+      {
+        status: 200,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      }
     );
   } catch (error) {
     console.error("Kontaktformular Fehler:", error);
 
     return new Response(
       "Es ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
-      { status: 500 }
+      {
+        status: 500,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      }
     );
   }
 }
 
 export async function onRequestGet() {
-  return new Response("Method not allowed", { status: 405 });
+  return new Response("Method not allowed", {
+    status: 405,
+    headers: { "Content-Type": "text/plain; charset=utf-8" },
+  });
 }
 
 function isValidEmail(email) {
