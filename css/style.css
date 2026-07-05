@@ -636,3 +636,279 @@ h1 span {
 
     margin-bottom:42px;
 }
+
+/* ===========================
+   MOBILE REFINEMENT
+   Only affects tablets and smartphones.
+   Desktop styles remain unchanged.
+=========================== */
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 132px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    padding: 1rem 1.15rem 0.85rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .brand {
+    width: 100%;
+    gap: 0.9rem;
+  }
+
+  .brand-logo {
+    width: 3.65rem;
+    height: 3.65rem;
+    flex: 0 0 3.65rem;
+  }
+
+  .brand-text {
+    font-size: clamp(1.05rem, 5vw, 1.45rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .site-nav {
+    width: calc(100% + 2.3rem);
+    margin-left: -1.15rem;
+    padding: 0.15rem 1.15rem 0.05rem;
+    display: flex;
+    gap: 1.7rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    font-size: 0.82rem;
+    line-height: 1.25;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  .site-nav .nav-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: calc(100svh - 92px);
+    padding: 5rem 1.25rem 4.25rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-media {
+    inset: 0;
+  }
+
+  .hero-media::before {
+    background:
+      linear-gradient(90deg, rgba(2, 7, 18, 0.97) 0%, rgba(2, 7, 18, 0.84) 48%, rgba(2, 7, 18, 0.50) 100%),
+      linear-gradient(180deg, rgba(2, 7, 18, 0.36) 0%, rgba(2, 7, 18, 0.12) 38%, rgba(2, 7, 18, 0.74) 100%);
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% center;
+    transform: scale(1.03);
+    filter: saturate(0.92) contrast(1.07) brightness(0.9);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: min(34rem, 100%);
+    max-width: 34rem;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .hero h1 {
+    max-width: 10ch;
+    font-size: clamp(3rem, 15.5vw, 5.45rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-line {
+    width: 7.25rem;
+    margin: 2rem 0 1.55rem;
+  }
+
+  .hero-claim {
+    max-width: 17rem;
+    font-size: clamp(1rem, 4.3vw, 1.32rem);
+    line-height: 1.38;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-text {
+    max-width: 34rem;
+    margin-top: 2.05rem;
+    font-size: clamp(1.05rem, 5vw, 1.42rem);
+    line-height: 1.62;
+    letter-spacing: -0.015em;
+  }
+
+  .hero-actions {
+    margin-top: 2.45rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+    max-width: 24rem;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    min-height: 4.05rem;
+    justify-content: center;
+  }
+
+  .values,
+  .content-section,
+  .cta-section,
+  .contact-section,
+  .footer-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .values {
+    padding-top: 4.25rem;
+  }
+
+  .value-grid {
+    gap: 1rem;
+  }
+
+  .value-card {
+    padding: 1.45rem 0;
+  }
+
+  .content-section,
+  .cta-section,
+  .contact-section {
+    scroll-margin-top: 132px;
+  }
+
+  .split-section {
+    gap: 1.35rem;
+  }
+
+  .section-watermark {
+    opacity: 0.055;
+    width: min(72vw, 18rem);
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    font-size: 16px;
+  }
+
+  .privacy-check {
+    align-items: flex-start;
+    line-height: 1.55;
+  }
+
+  .footer-inner {
+    text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    gap: 1rem 1.35rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-nav {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.45rem;
+  }
+
+  .hero {
+    min-height: calc(100svh - 88px);
+    padding: 4.2rem 1rem 3.6rem;
+  }
+
+  .hero-media img {
+    object-position: 66% center;
+    transform: scale(1.05);
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 16.8vw, 4.85rem);
+  }
+
+  .hero-text {
+    font-size: clamp(1.05rem, 4.75vw, 1.3rem);
+    line-height: 1.58;
+  }
+
+  .hero-actions {
+    max-width: none;
+  }
+
+  .values,
+  .content-section,
+  .cta-section,
+  .contact-section,
+  .footer-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-text {
+    font-size: 1.08rem;
+  }
+
+  .site-nav a {
+    font-size: 0.76rem;
+  }
+
+  .hero h1 {
+    font-size: 2.9rem;
+  }
+
+  .hero-claim {
+    font-size: 0.98rem;
+  }
+}
