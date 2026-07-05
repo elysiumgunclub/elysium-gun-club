@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elysium Gun Club e.V.</title>
   <link rel="icon" type="image/svg+xml" href="images/logo.svg?v=2">
-<link rel="alternate icon" type="image/png" href="images/logo.png?v=2">
-<link rel="apple-touch-icon" href="images/logo.png?v=2">
+  <link rel="alternate icon" type="image/png" href="images/logo.png?v=2">
+  <link rel="apple-touch-icon" href="images/logo.png?v=2">
 
-<meta property="og:title" content="Elysium Gun Club e.V.">
-<meta property="og:description" content="Moderner Großkaliberverein aus Schwalmtal. Präzision. Verantwortung. Gemeinschaft.">
-<meta property="og:image" content="https://elysiumgunclub.com/images/hero.webp">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://elysiumgunclub.com">
+  <meta property="og:title" content="Elysium Gun Club e.V.">
+  <meta property="og:description" content="Moderner Großkaliberverein aus Schwalmtal. Präzision. Verantwortung. Gemeinschaft.">
+  <meta property="og:image" content="https://elysiumgunclub.com/images/hero.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elysiumgunclub.com">
   <meta name="description" content="Elysium Gun Club e.V. – moderner Großkaliberverein aus Schwalmtal am Niederrhein." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -122,7 +122,7 @@
     </section>
 
     <section id="leitbild" class="content-section">
-        <img class="section-watermark" src="images/logo.svg" alt="" aria-hidden="true" />
+      <img class="section-watermark" src="images/logo.svg" alt="" aria-hidden="true" />
       <p class="section-kicker">Leitbild</p>
       <h2>Unser Selbstverständnis</h2>
 
@@ -194,7 +194,7 @@
         Nutze das Formular, wenn du Fragen zum Verein hast oder dich für eine Mitgliedschaft interessierst.
       </p>
 
-      <form class="contact-form" action="/api/contact" method="post">
+      <form class="contact-form" action="/api/contact" method="post" accept-charset="UTF-8">
         <div class="form-grid">
           <div class="form-row">
             <label for="firstname">Vorname</label>
@@ -236,92 +236,193 @@
         <p class="footer-title">Elysium Gun Club e.V.</p>
         <p>Schwalmtal · Niederrhein</p>
 
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Rechtliche Hinweise und Kontakt">
           <a href="#kontakt">Kontakt</a>
           <a href="#impressum">Impressum</a>
           <a href="#datenschutz">Datenschutz</a>
-        </div>
+        </nav>
 
-        <section id="impressum" class="legal-section">
-          <h2>Impressum</h2>
+        <details id="impressum" class="legal-section legal-details">
+          <summary>Impressum</summary>
+          <div class="legal-content">
+            <p><strong>Elysium Gun Club e.V.</strong></p>
+            <p>Antoniusstraße 3<br />41366 Schwalmtal</p>
 
-          <p><strong>Elysium Gun Club e.V.</strong></p>
-          <p>Antoniusstraße 3<br />41366 Schwalmtal</p>
+            <p><strong>Vertreten durch:</strong><br>
+              Malcolm Gruschka, 1. Vorsitzender<br>
+              Richard Bischoff, Schatzmeister
+            </p>
 
-          <p><strong>Vertreten durch:</strong><br>
-Malcolm Gruschka, 1. Vorsitzender<br>
-Richard Bischoff, Schatzmeister
-</p>
+            <p><strong>Registereintrag:</strong><br />
+              Eingetragen im Vereinsregister.<br />
+              Registergericht: Amtsgericht Mönchengladbach<br />
+              Registernummer: VR 5907
+            </p>
 
-          <p><strong>Registereintrag:</strong><br />
-            Eingetragen im Vereinsregister.<br />
-            Registergericht: Amtsgericht Mönchengladbach<br />
-            Registernummer: VR 5907
-          </p>
+            <p><strong>Kontakt:</strong><br />
+              E-Mail: info@elysiumgunclub.com
+            </p>
 
-          <p><strong>Kontakt:</strong><br />
-            E-Mail: info@elysiumgunclub.com
-          </p>
+            <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br />
+              Malcolm Gruschka<br />
+              Antoniusstraße 3<br />
+              41366 Schwalmtal
+            </p>
+          </div>
+        </details>
 
-          <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br />
-            Malcolm Gruschka<br />
-            Antoniusstraße 3<br />
-            41366 Schwalmtal
-          </p>
-        </section>
+        <details id="datenschutz" class="legal-section legal-details">
+          <summary>Datenschutzerklärung</summary>
+          <div class="legal-content">
+            <p class="legal-updated">Stand: Juli 2026</p>
 
-        <section id="datenschutz" class="legal-section">
-          <h2>Datenschutzerklärung</h2>
+            <h3>1. Verantwortlicher</h3>
+            <p>
+              Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:<br />
+              <strong>Elysium Gun Club e.V.</strong><br />
+              Antoniusstraße 3<br />
+              41366 Schwalmtal<br />
+              E-Mail: info@elysiumgunclub.com
+            </p>
 
-          <p>
-            Der Schutz personenbezogener Daten ist uns wichtig. Diese Website dient der Information über den Elysium Gun Club e.V.
-            und der Kontaktaufnahme mit dem Verein.
-          </p>
+            <h3>2. Allgemeine Hinweise zur Datenverarbeitung</h3>
+            <p>
+              Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb dieser Website, die sichere Bereitstellung unserer Inhalte
+              und die Bearbeitung von Kontaktanfragen erforderlich ist. Personenbezogene Daten sind alle Informationen, die sich auf eine
+              identifizierte oder identifizierbare natürliche Person beziehen, zum Beispiel Name, E-Mail-Adresse, IP-Adresse oder Inhalte einer Nachricht.
+            </p>
+            <p>
+              Die Verarbeitung erfolgt insbesondere auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO, wenn eine Einwilligung erteilt wurde,
+              Art. 6 Abs. 1 lit. b DSGVO, wenn die Verarbeitung zur Durchführung vorvertraglicher Maßnahmen oder zur Bearbeitung einer auf
+              Mitgliedschaft gerichteten Anfrage erforderlich ist, sowie Art. 6 Abs. 1 lit. f DSGVO, wenn wir ein berechtigtes Interesse an der
+              sicheren, stabilen und zweckmäßigen Bereitstellung unserer Website und der Bearbeitung von Anfragen haben.
+            </p>
 
-          <h3>Verantwortlicher</h3>
-          <p>
-            Elysium Gun Club e.V.<br />
-            Antoniusstraße 3<br />
-            41366 Schwalmtal<br />
-            E-Mail: info@elysiumgunclub.com
-          </p>
+            <h3>3. Bereitstellung der Website und Server-Logfiles</h3>
+            <p>
+              Beim Aufruf unserer Website werden technisch erforderliche Daten verarbeitet. Dazu können insbesondere IP-Adresse, Datum und Uhrzeit
+              des Zugriffs, aufgerufene Seiten oder Dateien, übertragene Datenmenge, Referrer-URL, Browsertyp, Betriebssystem sowie technische
+              Verbindungsdaten gehören. Diese Daten sind erforderlich, um die Website auszuliefern, ihre Stabilität und Sicherheit zu gewährleisten
+              und Missbrauch oder technische Störungen erkennen zu können.
+            </p>
+            <p>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren und zuverlässigen Bereitstellung
+              unseres Online-Angebots.
+            </p>
 
-          <h3>Hosting und Server-Logfiles</h3>
-          <p>
-            Diese Website wird über Cloudflare bereitgestellt. Beim Aufruf der Website können technisch notwendige Daten verarbeitet werden,
-            insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten, Browsertyp, Betriebssystem und Referrer-URL.
-            Diese Daten dienen der sicheren und stabilen Bereitstellung der Website.
-          </p>
+            <h3>4. Hosting, CDN und Sicherheitsdienste von Cloudflare</h3>
+            <p>
+              Unsere Website wird über Cloudflare Pages und damit über Dienste von Cloudflare bereitgestellt. Anbieter ist Cloudflare, Inc.,
+              101 Townsend St, San Francisco, CA 94107, USA; in Deutschland ist außerdem die Cloudflare Germany GmbH, Rosental 7, c/o Mindspace,
+              80331 München, erreichbar. Cloudflare verarbeitet technische Zugriffsdaten, insbesondere IP-Adressen und Verbindungsdaten,
+              um die Website auszuliefern, Ladezeiten zu verbessern und die Website vor Angriffen und missbräuchlichen Zugriffen zu schützen.
+            </p>
+            <p>
+              Die Nutzung von Cloudflare erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sicheren,
+              schnellen und zuverlässigen Bereitstellung der Website. Soweit Cloudflare personenbezogene Daten in unserem Auftrag verarbeitet,
+              erfolgt dies auf Grundlage einer Vereinbarung zur Auftragsverarbeitung im Sinne von Art. 28 DSGVO.
+            </p>
+            <p>
+              Weitere Informationen findest du in der Datenschutzerklärung von Cloudflare unter
+              <a href="https://www.cloudflare.com/policies/privacy/" rel="noopener noreferrer">cloudflare.com/policies/privacy/</a>.
+            </p>
 
-          <h3>Kontaktformular</h3>
-          <p>
-            Wenn du uns über das Kontaktformular schreibst, verarbeiten wir die von dir eingegebenen Daten ausschließlich zur Bearbeitung
-            deiner Anfrage. Dazu gehören insbesondere Name, E-Mail-Adresse, Betreff und Nachricht. Die Verarbeitung erfolgt auf Grundlage
-            deiner Einwilligung sowie unseres berechtigten Interesses an der Bearbeitung von Anfragen.
-          </p>
+            <h3>5. Kontaktformular und E-Mail-Versand über Resend</h3>
+            <p>
+              Wenn du uns über das Kontaktformular schreibst, verarbeiten wir die von dir eingegebenen Daten zur Bearbeitung deiner Anfrage.
+              Dazu gehören insbesondere Vorname, Nachname, E-Mail-Adresse, Betreff, Nachricht sowie die Bestätigung, dass du die Datenschutzerklärung
+              gelesen hast. Ohne die Pflichtangaben können wir deine Anfrage nicht über das Formular entgegennehmen.
+            </p>
+            <p>
+              Die Verarbeitung erfolgt je nach Inhalt der Anfrage auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf eine
+              Mitgliedschaft oder vorvertragliche Kommunikation gerichtet ist, sowie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, weil wir ein
+              berechtigtes Interesse daran haben, eingehende Anfragen zuverlässig zu empfangen und zu beantworten. Soweit eine Einwilligung abgefragt
+              wird, erfolgt die Verarbeitung zusätzlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+            </p>
+            <p>
+              Für die technische Weiterleitung der Kontaktanfrage per E-Mail nutzen wir den Dienst Resend. Anbieter ist Plus Five Five, Inc.,
+              2261 Market Street #5039, San Francisco, CA 94114, USA. Die über das Formular eingegebenen Daten werden über eine Cloudflare Pages
+              Function verarbeitet und anschließend über Resend an unsere Vereinsadresse info@elysiumgunclub.com zugestellt. Resend verarbeitet dabei
+              insbesondere Absenderadresse, Empfängeradresse, Betreff, Nachrichteninhalt und technische Versanddaten.
+            </p>
+            <p>
+              Resend bietet nach eigenen Angaben DSGVO-bezogene Vertragsunterlagen und ein Data Processing Addendum an. Soweit Resend personenbezogene
+              Daten in unserem Auftrag verarbeitet, erfolgt dies auf Grundlage einer Vereinbarung zur Auftragsverarbeitung. Da Resend ein US-Anbieter ist,
+              kann eine Verarbeitung oder ein Zugriff außerhalb der Europäischen Union nicht vollständig ausgeschlossen werden. Wir achten bei der Auswahl
+              der eingesetzten Dienste auf angemessene Schutzmaßnahmen.
+            </p>
+            <p>
+              Weitere Informationen findest du in der Datenschutzerklärung von Resend unter
+              <a href="https://resend.com/legal/privacy-policy" rel="noopener noreferrer">resend.com/legal/privacy-policy</a>.
+            </p>
 
-          <h3>Cookies und Analyse</h3>
-          <p>
-            Diese Website verwendet derzeit keine Analyse-Tools, kein Tracking und keine Marketing-Cookies.
-          </p>
+            <h3>6. Cookies, lokale Speicherung und Analyse</h3>
+            <p>
+              Unsere Website verwendet derzeit keine Analyse-Tools, kein Tracking, keine Marketing-Cookies und keine Werbeprofile.
+              Wir setzen selbst keine nicht erforderlichen Cookies ein. Soweit technisch notwendige Speicherungen oder Zugriffe auf dein Endgerät
+              erfolgen, dienen diese ausschließlich der sicheren und funktionsfähigen Bereitstellung der Website oder des Kontaktformulars.
+              Rechtsgrundlage für technisch notwendige Vorgänge ist § 25 Abs. 2 TDDDG sowie Art. 6 Abs. 1 lit. f DSGVO.
+            </p>
+            <p>
+              Für nicht technisch erforderliche Cookies oder vergleichbare Technologien würden wir vorab eine Einwilligung einholen. Da solche
+              Dienste derzeit nicht eingesetzt werden, erscheint auf dieser Website aktuell kein Cookie-Banner.
+            </p>
 
-          <h3>Speicherdauer</h3>
-          <p>
-            Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Bearbeitung der Anfrage oder aufgrund gesetzlicher
-            Aufbewahrungspflichten erforderlich ist.
-          </p>
+            <h3>7. Empfänger personenbezogener Daten</h3>
+            <p>
+              Zugriff auf personenbezogene Daten erhalten nur diejenigen Stellen, die diese zur Erfüllung der genannten Zwecke benötigen. Dazu zählen
+              insbesondere der Verein selbst sowie die von uns eingesetzten technischen Dienstleister für Hosting, Sicherheit und E-Mail-Versand.
+              Eine Weitergabe zu Werbezwecken findet nicht statt.
+            </p>
 
-          <h3>Deine Rechte</h3>
-          <p>
-            Du hast im Rahmen der gesetzlichen Vorgaben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-            Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung. Zudem kannst du eine erteilte Einwilligung jederzeit widerrufen.
-            Außerdem besteht ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde.
-          </p>
-        </section>
+            <h3>8. Speicherdauer</h3>
+            <p>
+              Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist. Kontaktanfragen speichern wir
+              grundsätzlich so lange, wie dies zur Bearbeitung der Anfrage und einer etwaigen Anschlusskommunikation notwendig ist. Gesetzliche
+              Aufbewahrungsfristen bleiben unberührt.
+            </p>
+
+            <h3>9. Deine Rechte</h3>
+            <p>
+              Du hast im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft über die von uns verarbeiteten personenbezogenen Daten,
+              Berichtigung unrichtiger Daten, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen,
+              die auf Art. 6 Abs. 1 lit. f DSGVO beruhen. Soweit eine Verarbeitung auf deiner Einwilligung beruht, kannst du diese Einwilligung
+              jederzeit mit Wirkung für die Zukunft widerrufen.
+            </p>
+
+            <h3>10. Beschwerderecht bei einer Aufsichtsbehörde</h3>
+            <p>
+              Du hast außerdem das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn du der Ansicht bist, dass die Verarbeitung
+              deiner personenbezogenen Daten gegen Datenschutzrecht verstößt. Zuständig kann insbesondere die Landesbeauftragte für Datenschutz und
+              Informationsfreiheit Nordrhein-Westfalen sein.
+            </p>
+
+            <h3>11. Änderung dieser Datenschutzerklärung</h3>
+            <p>
+              Wir können diese Datenschutzerklärung anpassen, wenn sich technische, organisatorische oder rechtliche Anforderungen ändern.
+              Es gilt jeweils die auf dieser Website veröffentlichte aktuelle Fassung.
+            </p>
+          </div>
+        </details>
 
         <p class="copyright">© 2026 Elysium Gun Club e.V. Alle Rechte vorbehalten.</p>
       </div>
     </footer>
   </main>
+
+  <script>
+    function openLegalDetailsFromHash() {
+      var id = window.location.hash.replace("#", "");
+      if (!id) return;
+
+      var target = document.getElementById(id);
+      if (target && target.tagName.toLowerCase() === "details") {
+        target.open = true;
+      }
+    }
+
+    window.addEventListener("hashchange", openLegalDetailsFromHash);
+    openLegalDetailsFromHash();
+  </script>
 </body>
 </html>
