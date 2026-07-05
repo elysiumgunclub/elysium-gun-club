@@ -912,3 +912,60 @@ h1 span {
     font-size: 0.98rem;
   }
 }
+
+/* ===========================
+   MOBILE HERO FIX
+   Ensures the fixed mobile header no longer covers the hero headline.
+=========================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 12.25rem;
+    padding-bottom: 4.25rem;
+    align-items: flex-start;
+  }
+
+  .hero-media {
+    inset: 0;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.85rem, 13.5vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: 0.045em;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    min-height: auto;
+    padding-top: 12.75rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 13.6vw, 4.25rem);
+    line-height: 1.04;
+    letter-spacing: 0.038em;
+  }
+
+  .hero-line {
+    margin-top: 1.65rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-top: 12.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2.72rem;
+  }
+}
